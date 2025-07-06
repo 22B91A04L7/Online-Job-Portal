@@ -1,7 +1,7 @@
 import Job from "../models/Job.js"
 import JobApplication from "../models/jobApplication.js"
 
-// Get all jobs posted by a company
+// Get all Jobs posted by a Company
 
 export const getJobs = async (req, res) => {
     try {
