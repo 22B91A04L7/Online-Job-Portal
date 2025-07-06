@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+
+*{
+    font-family: 'outfit';
+}
+
+@layer base{
+  html {
+    scroll-behavior:smooth;
+  }
+}
+
+::-webkit-scrollbar
+{
+  display:none;
+}
+
+/* App.css or your main stylesheet */
+.rich-text {
+  font-size: 15px;
+  color: #7A7B7D;
+  line-height: 1.7;
+}
+
+.rich-text p {
+  margin-bottom: 16px;
+}
+
+.rich-text h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #252525;
+  margin: 32px 0 16px 0;
+}
+
+.rich-text h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #252525;
+  margin: 28px 0 12px 0;
+}
+
+.rich-text h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin: 24px 0 10px 0;
+}
+
+.rich-text h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #444444;
+  margin: 20px 0 8px 0;
+}
+
+.rich-text ol,
+.rich-text ul {
+  margin-left: 30px; list-style-type: decimal;
+  /* margin-bottom: 16px; */
+}
+
+.rich-text li {
+  margin-bottom: 8px;
+}
+
+.rich-text strong {
+  font-weight: 700;
+  color: #252525;
+}
+
+@layer utilities {
+  /* Responsive scrollbar hide */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Text truncation */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-marquee {
+    animation: marquee 60s linear infinite;
+  } 
+  .pause-on-hover:hover {
+    animation-play-state: paused !important;
+  }
+}
